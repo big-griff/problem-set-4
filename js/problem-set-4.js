@@ -3,6 +3,8 @@
  */
 
 function hello() {
+  var p = document.getElementById("hello");
+  p.InnerHTML = "Hello, AP Computer Science Principles!";
 
   // WRITE YOUR EXERCISE 1 CODE HERE
 
