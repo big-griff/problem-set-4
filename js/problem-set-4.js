@@ -2,21 +2,18 @@
  * Hello. 2 points.
  */
 
-function hello() {
-  getElementById("output1") = "Hello, AP Computer Science Principles!"
 
   // WRITE YOUR EXERCISE 1 CODE HERE
-
+  function hello() {
+    var p = document.getElementById("output1").innerHTML = ("Hello, AP Computer Science Principles!");
   ////////////////// DO NOT MODIFY
   check("hello"); // DO NOT MODIFY
   ////////////////// DO NOT MODIFY
 }
-
 /*
  * Hello, Again. 3 points.
  */
 
-function helloAgain() {
 
   //////////// DO NOT MODIFY
   let name; // DO NOT MODIFY
@@ -26,7 +23,9 @@ function helloAgain() {
   // do not need to re-declare it, only assign it a value.
 
   // WRITE YOUR EXERCISE 2 CODE HERE
-
+  function helloAgain() {
+  name = prompt("Please enter your name below.");
+  var p = document.getElementById("output2").innerHTML = (`Hello, ${name}!`);
   ///////////////////////////// DO NOT MODIFY
   check("helloAgain", name); // DO NOT MODIFY
   ///////////////////////////// DO NOT MODIFY
@@ -35,18 +34,18 @@ function helloAgain() {
 /*
  * Celsius. 5 points.
  */
-
 function celsius() {
 
-  //////////////////////////////////////////////////////// DO NOT MODIFY
-  let cels = ((Math.random() * 1001) - 100).toFixed(2); // DO NOT MODIFY
-  //////////////////////////////////////////////////////// DO NOT MODIFY
+  ////////////////////////////////////////////////////////// DO NOT MODIFY
+  let cels = ((Math.random() * 1001) - 100).toFixed(2); //// DO NOT MODIFY
+  ////////////////////////////////////////////////////////// DO NOT MODIFY
 
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
 
   // WRITE YOUR EXERCISE 3 CODE HERE
-
+  fahre = (cels*9/5+32).toFixed(2);
+  var p = document.getElementById("output3").innerHTML = (`${cels} degrees Celsius equals ${fahre} degrees Fahrenheit.`);
   ////////////////////////// DO NOT MODIFY
   check("celsius", cels); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
@@ -66,7 +65,8 @@ function fahrenheit() {
   // (inclusive), and rounds this value to 2 decimal places.
 
   // WRITE YOUR EXERCISE 4 CODE HERE
-
+  let celsi = ((fahr-32)*5/9).toFixed(2);
+  var p = document.getElementById("output4").innerHTML = (`${fahr} degrees Fahrenheit equals ${celsi} degrees Celsius.`)
   ///////////////////////////// DO NOT MODIFY
   check("fahrenheit", fahr); // DO NOT MODIFY
   ///////////////////////////// DO NOT MODIFY
@@ -90,7 +90,11 @@ function inches() {
   ////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 5 CODE HERE
-
+  let miles = Math.floor(inches / 63360);
+  let yards = Math.floor(inches % 63360 / 36);
+  let feet = Math.floor(inches % 63360 % 36 / 12);
+  inches = Math.floor(inches % 63360 % 36 % 12);
+  var thirsty = document.getElementById("output5").innerHTML = ("Miles: " + miles + "<br/>Yards: " + yards + "<br/>Feet: " + feet + "<br/>Inches: " + inches);
   ////////////////////////// DO NOT MODIFY
   check("inches", input); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
